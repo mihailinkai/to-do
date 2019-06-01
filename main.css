@@ -1,0 +1,132 @@
+body {
+    background-color: #fafafa;
+    color: #757575;
+    font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+button:hover {
+    background-color: rgba(158,158,158,.2);
+}
+
+button:active {
+    background-color: rgba(158,158,158,.4);
+}
+
+
+input {
+    font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #757575;
+    padding: .5em;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+main {
+    background: #fff;
+    width: 700px;
+    margin: 70px auto;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    display: inline-block;
+    color: #323330;
+    margin: 1rem auto;
+}
+
+
+/* Todo Item */
+.todo-item {
+    display: flex;
+    font-size: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background-color: #fff;
+    transition: all .2s;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 1em;
+    align-items: center;
+}
+
+.todo-item.completed * {
+    color: lightgray;
+}
+
+.todo-item .checkbox {
+    margin-right: .5rem;
+}
+
+.todo-item .title,
+.todo-item .textfield {
+    margin-right: auto;
+}
+
+.todo-item.completed .title {
+    text-decoration: line-through;
+}
+
+.todo-item.editing .title {
+    display: none;
+}
+
+.todo-item .textfield {
+    display: none;
+}
+
+.todo-item.editing .textfield {
+    display: block;
+}
+
+.todo-item button {
+    opacity: 0;
+    transition: all .2s;
+}
+
+.todo-item:hover button:not(.checkbox) {
+    opacity: 1;
+}
+
+
+
+/* Todo form */
+
+#todo-form {
+    display: flex;
+    background-color: #FAFAFA;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 10px;
+}
+
+#todo-form input {
+    flex: 1;
+    outline: none;
+    transition: all .2s;
+}
+
+#todo-form input:focus {
+    border: 1px solid #f0db4f;
+}
+
+#todo-form button {
+    margin-left: 10px;
+}
